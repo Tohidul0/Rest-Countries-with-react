@@ -15,7 +15,7 @@ function App() {
 
 function Boost(){
 
-  // useState use like a function in react when upadte event hendler
+  // useState use like a function in react when upadte event hendeler
   const [count, setCount] = useState(0);
   const increase = () =>{
     const newCount=count+1
@@ -42,7 +42,8 @@ function Boost(){
         <h1>{countries.length}</h1>
          <div className='row  '>
          {
-          countries.map(country => <Country name={country.name.common} area={country.area} image={country.flags.png}></Country> )
+          countries.map(country => <Country name={country}></Country> )
+          // countries.map(country => <Country name={country.name.common} area={country.area} image={country.flags.png}></Country> )
          }
          </div>
         
@@ -50,13 +51,13 @@ function Boost(){
     )
   }
   function Country(props){
-    console.log(props)
+    const show =props.name;
     return(
-      <div className='countries-container col-lg-3 g-2'>
-        <div>
-        <img style={{width: "250px"}} src={props.image}/>
-        <h3>Name : {props.name}</h3>
-        <h3>Area : {props.area}</h3>
+      <div className='countries-container col-lg-3 g-2 d-flex justify-content-center'>
+        <div className='text-center'>
+         <img style={{width: "250px"}} src={show.flags.png}/>
+         <h3>Name : {show.name.common}</h3>
+         <h3>Area : {show.area}</h3>
         </div>
       </div>
     )
