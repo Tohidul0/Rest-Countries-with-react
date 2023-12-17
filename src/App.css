@@ -36,8 +36,3 @@
     transform: rotate(360deg);
   }
 }
-.countries-container{
-  border: 2px solid rgb(15, 236, 70);
-  display: grid;
-  grid-template-columns: auto;
-}
