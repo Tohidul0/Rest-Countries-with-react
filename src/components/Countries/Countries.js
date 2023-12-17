@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Country from './Country/Country';
+import './Countries.css'
 
 const Countries = () => {
     const [countries, setCountries] =useState([])
@@ -11,7 +12,7 @@ const Countries = () => {
     .then(data => setCountries(data))
     },[])
     return(
-      <div>
+      <div className='all-countries-container'>
         <h1>{countries.length}</h1>
          <div className='row  '>
          {
