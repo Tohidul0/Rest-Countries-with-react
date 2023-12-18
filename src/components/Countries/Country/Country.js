@@ -17,7 +17,9 @@ const Country = (props) => {
            <img style={{width: "250px"}} src={show.flags.png}/>
            <h3>Name : {show.name.common}</h3>
            <h3>Area : {show.area}</h3>
-           <button onClick={()=>adToCard(show.name.common)}>Load country</button>
+           <p>Population : {show.population}</p>
+           <p>Region : {show.region}</p>
+           <button onClick={()=>adToCard(show.region)}>Load country</button> 
           </div>
         </div>
       )
